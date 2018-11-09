@@ -32,3 +32,4 @@ F:\Visual Project\MyProjects\ASP.NET Project\Liverpool Fan Shop\LiverpoolFanShop
 F:\Visual Project\MyProjects\ASP.NET Project\Liverpool Fan Shop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\LiverpoolFanShopApp.dll
 F:\Visual Project\MyProjects\ASP.NET Project\Liverpool Fan Shop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\LiverpoolFanShopApp.pdb
 F:\Visual Project\MyProjects\ASP.NET Project\Liverpool Fan Shop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\LiverpoolFanShopApp.csproj.CopyComplete
+F:\Visual Project\MyProjects\ASP.NET Project\Liverpool Fan Shop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\LiverpoolFanShopApp.csprojAssemblyReference.cache
