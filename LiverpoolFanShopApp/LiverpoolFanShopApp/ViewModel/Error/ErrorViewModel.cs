@@ -1,6 +1,4 @@
-using System;
-
-namespace LiverpoolFanShopApp.Models
+namespace LiverpoolFanShopApp.ViewModel.Error
 {
     public class ErrorViewModel
     {

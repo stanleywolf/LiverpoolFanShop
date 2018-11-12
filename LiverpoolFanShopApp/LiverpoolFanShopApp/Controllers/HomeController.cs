@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using LiverpoolFanShopApp.Models;
+using LiverpoolFanShopApp.ViewModel.Error;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LiverpoolFanShopApp.Controllers

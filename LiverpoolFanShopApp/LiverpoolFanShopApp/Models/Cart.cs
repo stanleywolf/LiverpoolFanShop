@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LiverpoolFanShopApp.Controllers
+namespace LiverpoolFanShopApp.Models
 {
-    public class ProductController:BaseController
+    public class Cart
     {
     }
 }
