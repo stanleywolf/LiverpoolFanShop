@@ -10,6 +10,16 @@ namespace LiverpoolFanShopApp.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrdersProduct> OrdersProducts { get; set; }
+        public DbSet<Picture> Pictures { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
+        public DbSet<Receip> Receips { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+
+        //TODO: 'new' i don't now
+        public new DbSet<User> Users { get; set; }
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
