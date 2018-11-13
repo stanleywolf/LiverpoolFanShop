@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LiverpoolFanShopApp.Areas.Identity.Pages.Account;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Hosting;
@@ -10,10 +11,14 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LiverpoolFanShopApp.Data;
+using LiverpoolFanShopApp.Models;
 using LiverpoolFanShopApp.Services;
 using LiverpoolFanShopApp.Services.Contracts;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using RegisterModel = Microsoft.AspNetCore.Identity.UI.Pages.Account.Internal.RegisterModel;
 
 namespace LiverpoolFanShopApp
 {
@@ -39,15 +44,19 @@ namespace LiverpoolFanShopApp
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddIdentity<LiverpoolUser,IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 
             //ApplicationServices
             services.AddScoped<IDataService, DataService>();
             services.AddScoped<IUserService, UserService>();
 
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddScoped<UserManager<LiverpoolUser>>();
+            services.AddScoped<UserStore<LiverpoolUser>>();
+            //services.AddScoped<ILogger<RegisterModel>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

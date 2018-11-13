@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LiverpoolFanShopApp.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<LiverpoolUser>
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -19,7 +19,7 @@ namespace LiverpoolFanShopApp.Data
         public DbSet<Review> Reviews { get; set; }
 
         //TODO: 'new' i don't now
-        public new DbSet<User> Users { get; set; }
+        //public new DbSet<LiverpoolUser> Users { get; set; }
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -46,6 +46,8 @@ namespace LiverpoolFanShopApp.Data
                 .HasOne(x => x.Receip)
                 .WithOne(x => x.Order)
                 .HasForeignKey<Receip>(x => x.OrderId);
+
+            base.OnModelCreating(builder);
         }
     }
 }
