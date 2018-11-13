@@ -16,5 +16,26 @@ namespace LiverpoolFanShopApp.Data
             : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<OrdersProduct>()
+                .HasKey(x => new { x.ProductId, x.OrderId });
+
+            builder.Entity<OrdersProduct>()
+                .HasOne(x => x.Product)
+                .WithMany(x => x.OrdersProducts)
+                .HasForeignKey(x => x.ProductId);
+
+            builder.Entity<OrdersProduct>()
+                .HasOne(x => x.Order)
+                .WithMany(x => x.OrdersProducts)
+                .HasForeignKey(x => x.OrderId);
+
+            builder.Entity<Order>()
+                .HasOne(x => x.Receip)
+                .WithOne(x => x.Order)
+                .HasForeignKey<Receip>(x => x.OrderId);
+        }
     }
 }

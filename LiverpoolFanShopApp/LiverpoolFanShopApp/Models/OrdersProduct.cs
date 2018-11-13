@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace LiverpoolFanShopApp.Models
 {
-    public class Review
+    public class OrdersProduct
     {
-        [Required]
-        public int Id { get; set; }
-
-        [Required]
-        public string Content { get; set; }
-
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
 
-        public int UserId { get; set; }
-        public virtual User User { get; set; }
+        public int OrderId { get; set; }
+        public virtual Order Order { get; set; }
+
+        [Required]
+        public int Quantity { get; set; }
     }
 }
