@@ -49,6 +49,14 @@ namespace LiverpoolFanShopApp
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.ConfigureApplicationCookie(op =>
+            {
+                op.LoginPath = "/Identity/Account/Login";
+                op.LogoutPath = "/Identity/Account/Logout";
+                op.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                
+            });
+
             //ApplicationServices
             services.AddScoped<IDataService, DataService>();
             services.AddScoped<IUserService, UserService>();
@@ -82,8 +90,12 @@ namespace LiverpoolFanShopApp
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "area",
+                    template: "{area}/{controller}/{action}/{id?}");
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                
             });
         }
     }

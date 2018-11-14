@@ -110,3 +110,4 @@ F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopAp
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_LoginPartial.g.cshtml.cs
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
