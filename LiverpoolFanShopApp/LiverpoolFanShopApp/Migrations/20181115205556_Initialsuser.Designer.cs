@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace LiverpoolFanShopApp.Data.Migrations
+namespace LiverpoolFanShopApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181113205114_InitialCreates")]
-    partial class InitialCreates
+    [Migration("20181115205556_Initialsuser")]
+    partial class Initialsuser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,21 +34,74 @@ namespace LiverpoolFanShopApp.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("LiverpoolFanShopApp.Models.LiverpoolUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("AccessFailedCount");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256);
+
+                    b.Property<bool>("EmailConfirmed");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<bool>("LockoutEnabled");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("PasswordHash");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("SecurityStamp");
+
+                    b.Property<bool>("TwoFactorEnabled");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
+                });
+
             modelBuilder.Entity("LiverpoolFanShopApp.Models.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("LiverpoolUserId");
+
                     b.Property<int?>("ReceipId");
-
-                    b.Property<int>("UserId");
-
-                    b.Property<string>("UserId1");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("LiverpoolUserId");
 
                     b.ToTable("Orders");
                 });
@@ -113,19 +166,17 @@ namespace LiverpoolFanShopApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("LiverpoolUserId");
+
                     b.Property<int>("ProductId");
 
                     b.Property<double>("Rate");
 
-                    b.Property<int>("UserId");
-
-                    b.Property<string>("UserId1");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("LiverpoolUserId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Ratings");
                 });
@@ -155,17 +206,15 @@ namespace LiverpoolFanShopApp.Data.Migrations
                     b.Property<string>("Content")
                         .IsRequired();
 
+                    b.Property<string>("LiverpoolUserId");
+
                     b.Property<int>("ProductId");
-
-                    b.Property<int>("UserId");
-
-                    b.Property<string>("UserId1");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("LiverpoolUserId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Reviews");
                 });
@@ -214,62 +263,6 @@ namespace LiverpoolFanShopApp.Data.Migrations
                     b.ToTable("AspNetRoleClaims");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AccessFailedCount");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken();
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired();
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256);
-
-                    b.Property<bool>("EmailConfirmed");
-
-                    b.Property<bool>("LockoutEnabled");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256);
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256);
-
-                    b.Property<string>("PasswordHash");
-
-                    b.Property<string>("PhoneNumber");
-
-                    b.Property<bool>("PhoneNumberConfirmed");
-
-                    b.Property<string>("SecurityStamp");
-
-                    b.Property<bool>("TwoFactorEnabled");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -292,11 +285,9 @@ namespace LiverpoolFanShopApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("ProviderKey")
-                        .HasMaxLength(128);
+                    b.Property<string>("ProviderKey");
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -327,11 +318,9 @@ namespace LiverpoolFanShopApp.Data.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(128);
+                    b.Property<string>("Name");
 
                     b.Property<string>("Value");
 
@@ -340,24 +329,11 @@ namespace LiverpoolFanShopApp.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("LiverpoolFanShopApp.Models.User", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.ToTable("User");
-
-                    b.HasDiscriminator().HasValue("User");
-                });
-
             modelBuilder.Entity("LiverpoolFanShopApp.Models.Order", b =>
                 {
-                    b.HasOne("LiverpoolFanShopApp.Models.User", "User")
+                    b.HasOne("LiverpoolFanShopApp.Models.LiverpoolUser", "LiverpoolUser")
                         .WithMany("Orders")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("LiverpoolUserId");
                 });
 
             modelBuilder.Entity("LiverpoolFanShopApp.Models.OrdersProduct", b =>
@@ -391,14 +367,14 @@ namespace LiverpoolFanShopApp.Data.Migrations
 
             modelBuilder.Entity("LiverpoolFanShopApp.Models.Rating", b =>
                 {
+                    b.HasOne("LiverpoolFanShopApp.Models.LiverpoolUser", "LiverpoolUser")
+                        .WithMany("Ratings")
+                        .HasForeignKey("LiverpoolUserId");
+
                     b.HasOne("LiverpoolFanShopApp.Models.Product", "Product")
                         .WithMany("Ratings")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("LiverpoolFanShopApp.Models.User", "User")
-                        .WithMany("Ratings")
-                        .HasForeignKey("UserId1");
                 });
 
             modelBuilder.Entity("LiverpoolFanShopApp.Models.Receip", b =>
@@ -411,14 +387,14 @@ namespace LiverpoolFanShopApp.Data.Migrations
 
             modelBuilder.Entity("LiverpoolFanShopApp.Models.Review", b =>
                 {
+                    b.HasOne("LiverpoolFanShopApp.Models.LiverpoolUser", "LiverpoolUser")
+                        .WithMany("Reviews")
+                        .HasForeignKey("LiverpoolUserId");
+
                     b.HasOne("LiverpoolFanShopApp.Models.Product", "Product")
                         .WithMany("Reviews")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("LiverpoolFanShopApp.Models.User", "User")
-                        .WithMany("Reviews")
-                        .HasForeignKey("UserId1");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -431,7 +407,7 @@ namespace LiverpoolFanShopApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
+                    b.HasOne("LiverpoolFanShopApp.Models.LiverpoolUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -439,7 +415,7 @@ namespace LiverpoolFanShopApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
+                    b.HasOne("LiverpoolFanShopApp.Models.LiverpoolUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -452,7 +428,7 @@ namespace LiverpoolFanShopApp.Data.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
+                    b.HasOne("LiverpoolFanShopApp.Models.LiverpoolUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -460,7 +436,7 @@ namespace LiverpoolFanShopApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
+                    b.HasOne("LiverpoolFanShopApp.Models.LiverpoolUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

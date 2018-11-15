@@ -16,7 +16,7 @@ namespace LiverpoolFanShopApp.Models
 
         public bool IsConfirmed  => false;
 
-        public int LiverpoolUserId { get; set; }
+        public string LiverpoolUserId { get; set; }
         public virtual LiverpoolUser LiverpoolUser { get; set; }
 
         public int? ReceipId { get; set; }

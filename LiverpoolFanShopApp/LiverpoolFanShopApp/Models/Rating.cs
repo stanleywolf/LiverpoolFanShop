@@ -17,7 +17,7 @@ namespace LiverpoolFanShopApp.Models
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
 
-        public int LiverpoolUserId { get; set; }
+        public string LiverpoolUserId { get; set; }
         public virtual LiverpoolUser LiverpoolUser { get; set; }
     }
 }

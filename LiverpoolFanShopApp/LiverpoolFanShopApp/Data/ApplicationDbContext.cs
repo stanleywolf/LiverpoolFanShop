@@ -19,7 +19,7 @@ namespace LiverpoolFanShopApp.Data
         public DbSet<Review> Reviews { get; set; }
 
         //TODO: 'new' i don't now
-        //public new DbSet<LiverpoolUser> Users { get; set; }
+        public new DbSet<LiverpoolUser> Users { get; set; }
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
