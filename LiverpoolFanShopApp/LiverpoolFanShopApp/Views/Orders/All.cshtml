@@ -1,0 +1,48 @@
+﻿@model List<LiverpoolFanShopApp.Models.Product>
+
+@{
+    ViewData["Title"] = "All";
+    Layout = "_Layout";
+}
+
+<h2>All</h2>
+<div>
+    @foreach (var mod in Model)
+    {
+        <span>@mod.Price</span>
+    }
+
+</div>
+<div class="d-flex justify-content-between">
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr class="row">
+            <th scope="col" class="col-lg-5 d-flex justify-content-center"><h3>Id</h3></th>
+            <th scope="col" class="col-lg-2 d-flex justify-content-center"><h3>Fee</h3></th>
+            <th scope="col" class="col-lg-2 d-flex justify-content-center"><h3>Issued On</h3></th>
+            <th scope="col" class="col-lg-2 d-flex justify-content-center"><h3>Recipient</h3></th>
+            <th scope="col" class="col-lg-1 d-flex justify-content-center"><h3>Actions</h3></th>
+        </tr>
+        </thead>
+        @foreach(var mod in Model){
+        
+        <tbody>
+        <tr class="row">
+            <th scope="row" class="col-lg-5 d-flex justify-content-center"><h5>@mod.Id</h5></th>
+            <td class="col-lg-2 d-flex justify-content-center"><h5>@mod.Price</h5></td>
+            <td class="col-lg-2 d-flex justify-content-center"><h5>@mod.Name</h5></td>
+            <td class="col-lg-2 d-flex justify-content-center"><h5>@mod.CategoryId</h5></td>
+            <td class="col-lg-1 d-flex justify-content-center">
+                <a href="/receipts/detail?id=model.Id" class="btn bg-panda text-white">Details</a>
+            </td>
+        </tr>        
+        </tbody>
+
+        }
+        
+    </table>
+</div>
+@*<div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>*@

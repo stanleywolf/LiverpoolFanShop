@@ -1,0 +1,49 @@
+﻿@model List<LiverpoolFanShopApp.Models.Product>
+
+@{
+    ViewData["Title"] = "All";
+    Layout = "_Layout";
+}
+
+<h2>All</h2>
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-around mb-3">
+
+        <div class=" col-md-4">
+            <h3 class="text-center">Pending</h3>
+            <div style="border: 2px solid #202020; border-radius: 7px">
+                                       ">
+                @foreach (var mod in Model)
+                {
+
+                <div class="text-left m-4">
+                    <strong>@mod.Name</strong>
+                    <strong>$@mod.Price</strong>
+                    <strong>@mod.CategoryId</strong>
+                    <a class="btn bg-dark float-right m-auto btn-link text-light" href="/packeges/details?id=@mod.Id">Details</a>
+                </div>
+                }
+            </div>
+        </div>
+        <div class=" col-md-4">
+            <h3 class="text-center">Shipped</h3>
+            <div class="border-panda">
+
+            </div>
+        </div>
+        <div class=" col-md-4">
+            <h3 class="text-center">Delivered</h3>
+            <div class="border-panda">
+               
+            </div>
+        </div>
+
+    </div>
+</div>
+@*<div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>*@

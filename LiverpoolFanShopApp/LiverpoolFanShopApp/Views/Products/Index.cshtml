@@ -1,0 +1,36 @@
+﻿@model LiverpoolFanShopApp.Models.Product
+
+@{
+    ViewData["Title"] = "All";
+    Layout = "_Layout";
+}
+
+
+<div class="container-fluid">
+    <div class="row justify-content-around mb-3" >
+        <div class="col-md-4" style="margin-top: 10px">
+            <div class="card" style="width: 18rem;">
+                <img style="" class="card-img-top" src="images/Categories/Kit/manShirt.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Name</h5>
+                    <p class="card-text">$@Model.Price</p>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4"style="padding-top: 10px">
+                <div class="card" style="width: 36rem;">
+                    <img class="card-img-top" src="images/Categories/Kit/manShirt.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.Name</h5>
+                        <p class="card-text">$@Model.Price</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@*<div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>*@

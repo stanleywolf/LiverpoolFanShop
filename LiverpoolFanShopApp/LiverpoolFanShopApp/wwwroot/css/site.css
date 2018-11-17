@@ -35,3 +35,7 @@ body {
         display: none;
     }
 }
+.border-panda {
+    border: 2px solid #202020;
+    border-radius: 7px;
+}
