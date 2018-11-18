@@ -17,43 +17,37 @@
     </environment>
 </head>
 <body>
-    <div class="container body-content">
-        <nav class="navbar"
-             style="height: 15px;background-color: red; border-color: yellow; margin-top: 0;margin-bottom: 0;">
-            @*<a class="navbar-brand" href="#">
-                <img src="/images/logo-best.jpg" width="70" height="80" alt="">
-            </a>*@
-            <div class="container">
-                <div class="navbar-header" >
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
-                        <span class="sr-only" >Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style="color: black">LiverpoolFanShopApp</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a asp-area="" asp-controller="Home" asp-action="Index" style="color: black">Home</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="About" style="color: black">About</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color: black">Contact</a></li>
-                    </ul>
-                    <partial name="_LoginPartial"/>
-                </div>
-            </div>
-        </nav>
-        <nav class="navbar " style="height: 15px;background-color: red; border-color: yellow;margin-top: 1px">
 
-        </nav>
-
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: red; border-color: indigo">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style="color: indigo">LiverpoolFanShopApp</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index" style="color: indigo">Home</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="About" style="color: indigo">About</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color: indigo">Contact</a></li>
+            </ul>
+            <partial name="_LoginPartial"/>
+        </div>
     </div>
+</nav>
+
+<partial name="_CookieConsentPartial"/>
+
 <div class="container body-content">
     @RenderBody()
     <hr/>
     <footer>
-        <div style="background-color: red; color: black" class="panel-footer">
-            <h4><strong>&copy; 2018 - LiverpoolFanShopApp</strong></h4>
+        <div style="background-color: red; color:indigo" class="panel-footer">
+            <p ><strong>&copy; 2018 - LiverpoolFanShopApp</strong></p>
         </div>
     </footer>
 </div>

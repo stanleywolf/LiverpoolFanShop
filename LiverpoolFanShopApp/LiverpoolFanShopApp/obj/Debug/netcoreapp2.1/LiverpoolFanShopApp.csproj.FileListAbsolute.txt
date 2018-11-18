@@ -114,3 +114,4 @@ F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopAp
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Products\All.g.cshtml.cs
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Orders\All.g.cshtml.cs
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Products\Index.g.cshtml.cs
+F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layouts.g.cshtml.cs
