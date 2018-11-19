@@ -65,6 +65,7 @@ namespace LiverpoolFanShopApp
             services.AddScoped<UserManager<LiverpoolUser>>();
             services.AddScoped<UserStore<LiverpoolUser>>();
             //services.AddScoped<ILogger<RegisterModel>>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

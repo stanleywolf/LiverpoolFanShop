@@ -43,33 +43,34 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-lg" style="background-color: red; border-color: white;margin-top: 1px">
-            <a class="navbar-brand" href="#">
-                <img src="/images/standard-chartered-logo-white.png" alt="" style="height: 25px;display: block;overflow: hidden;
-                                                                    text-indent: 100%;white-space: nowrap; text-indent: -1000px;">
-            </a>
-            <div class="dropdown">
-                <ul >
-                    <li>
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown button
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>                   
+        <div class="row">
+            <div class="col-md-3" style="background-color: red; width: 100%; height: 45px ">
+                <a  href="#">
+                    <img src="/images/standard-chartered-logo-white.png" alt="" style="height: 25px; display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; text-indent: -1000px;">
+                </a>
+            </div>
+        </div>
+        </div>
+    <div class="container">
+        <div class="row"  >
+            <div class="col-md-3 col-sm-12" >
+                <ul class="list-group" >
+                    <li class="list-group-item" ><a href="/">Home</a></li>
+                    <li class="list-group-item"> <a href="/account/login">Login</a></li>
+                    <li class="list-group-item"> <a href="/account/register">Register</a></li>
+                    <li class="list-group-item"> <a href="/user/profile">My Profile</a></li>
+                    <li class="list-group-item"> <a href="/orders/list">My Orders</a></li>
+                    <li class="list-group-item"> <a href="/account/logout">Logout</a></li>                   
+                    <li class="list-group-item"><a href="/cakes/add">Add cakes</a></li>
+                    <li class="list-group-item">
+                        <form action="/cakes/search" method="get">
+                            <input type="text" name="searchText" class="form-control" />
+                            <input type="submit" class="form-control btn-danger" value="Search" />
+                        </form>
+                    </li>
                 </ul>
             </div>
-            <div style="nav-right:manual">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
-
+        </div>
     </div>
 
     <div class="container body-content">
