@@ -19,66 +19,90 @@
 <body>
     <div class="container body-content">
         <nav class="navbar"
-             style="height: 15px;background-color: red; border-color: yellow; margin-top: 0;margin-bottom: 0;">
-            @*<a class="navbar-brand" href="#">
-                <img src="/images/logo-best.jpg" width="70" height="80" alt="">
-            </a>*@
+             style="height:20px;background-color: red; border-color: white; margin-top: 50px;margin-bottom: 0;">
+            <a class="navbar-brand" href="#">
+                <img src="/images/LFC_logo.png" width="70" height="80" alt="" style="margin-top: -50px;">
+            </a>
             <div class="container">
-                <div class="navbar-header" >
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
-                        <span class="sr-only" >Toggle navigation</span>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style="color: black">LiverpoolFanShopApp</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style="color: white">LiverpoolFanShopApp</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a asp-area="" asp-controller="Home" asp-action="Index" style="color: black">Home</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="About" style="color: black">About</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color: black">Contact</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index" style="color: white">Home</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About" style="color: white">About</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color: white">Contact</a></li>
                     </ul>
-                    <partial name="_LoginPartial"/>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
-        <nav class="navbar " style="height: 15px;background-color: red; border-color: yellow;margin-top: 1px">
-
+        <nav class="navbar navbar-expand-lg" style="background-color: red; border-color: white;margin-top: 1px">
+            <a class="navbar-brand" href="#">
+                <img src="/images/standard-chartered-logo-white.png" alt="" style="height: 25px;display: block;overflow: hidden;
+                                                                    text-indent: 100%;white-space: nowrap; text-indent: -1000px;">
+            </a>
+            <div class="dropdown">
+                <ul >
+                    <li>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>                   
+                </ul>
+            </div>
+            <div style="nav-right:manual">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
         </nav>
 
     </div>
-<div class="container body-content">
-    @RenderBody()
-    <hr/>
-    <footer>
-        <div style="background-color: red; color: black" class="panel-footer">
-            <h4><strong>&copy; 2018 - LiverpoolFanShopApp</strong></h4>
-        </div>
-    </footer>
-</div>
 
-<environment include="Development">
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-</environment>
-<environment exclude="Development">
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-            asp-fallback-test="window.jQuery"
-            crossorigin="anonymous"
-            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-    </script>
-    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-            crossorigin="anonymous"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-    </script>
-    <script src="~/js/site.min.js" asp-append-version="true"></script>
-</environment>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div style="background-color: red; color: white" class="panel-footer">
+                <h4><strong>&copy; 2018 - LiverpoolFanShopApp</strong></h4>
+            </div>
+        </footer>
+    </div>
 
-@RenderSection("Scripts", required: false)
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

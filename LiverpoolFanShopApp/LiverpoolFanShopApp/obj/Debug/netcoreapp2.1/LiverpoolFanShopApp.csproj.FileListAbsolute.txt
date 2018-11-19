@@ -115,3 +115,15 @@ F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopAp
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Orders\All.g.cshtml.cs
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Products\Index.g.cshtml.cs
 F:\Visual Project\MyProjects\ASP.NET Project\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layouts.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_CookieConsentPartial.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_LoginPartial.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Orders\All.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Products\All.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Products\Index.g.cshtml.cs
+C:\Users\stanislav.nikolov\Desktop\LiverpoolFanShop\LiverpoolFanShop\LiverpoolFanShopApp\LiverpoolFanShopApp\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layouts.g.cshtml.cs

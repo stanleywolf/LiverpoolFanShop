@@ -8,11 +8,11 @@
     <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right" style="margin-right: 45px">
             <li>
-                <a asp-area="" asp-controller="Home" asp-action="Index" style="color: black">Hello @UserManager.GetUserName(User)!</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" style="color: white">Hello @UserManager.GetUserName(User)!</a>
 
             </li>
             <li>
-                <button type="submit" class="btn btn-link navbar-btn navbar-link" style="color: black">Logout</button>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link" style="color: white">Logout</button>
             </li>
         </ul>
     </form>
@@ -20,8 +20,8 @@
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li><a asp-area="Identity" asp-page="/Account/Register" style="color: black">Register</a></li>
-        <li><a asp-area="Identity" asp-page="/Account/Login" style="color: black">Login</a></li>
+    <ul class="nav navbar-nav navbar-right" style="margin-right:30px">
+        <li><a asp-area="Identity" asp-page="/Account/Register" style="color: white">Register</a></li>
+        <li><a asp-area="Identity" asp-page="/Account/Login" style="color: white">Login</a></li>
     </ul>
 }
