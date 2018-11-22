@@ -43,42 +43,53 @@
                 </div>
             </div>
         </nav>
-        <div class="row">
-            <div class="col-md-3" style="background-color: red; width: 100%; height: 45px ">
-                <a  href="#">
-                    <img src="/images/standard-chartered-logo-white.png" alt="" style="height: 25px; display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; text-indent: -1000px;">
-                </a>
-            </div>
-        </div>
-        </div>
-    <div class="container">
-        <div class="row"  >
-            <div class="col-md-3 col-sm-12" >
-                <ul class="list-group" >
-                    <li class="list-group-item" ><a href="/">Home</a></li>
-                    <li class="list-group-item"> <a href="/account/login">Login</a></li>
-                    <li class="list-group-item"> <a href="/account/register">Register</a></li>
-                    <li class="list-group-item"> <a href="/user/profile">My Profile</a></li>
-                    <li class="list-group-item"> <a href="/orders/list">My Orders</a></li>
-                    <li class="list-group-item"> <a href="/account/logout">Logout</a></li>                   
-                    <li class="list-group-item"><a href="/cakes/add">Add cakes</a></li>
-                    <li class="list-group-item">
-                        <form action="/cakes/search" method="get">
-                            <input type="text" name="searchText" class="form-control" />
-                            <input type="submit" class="form-control btn-danger" value="Search" />
-                        </form>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+        <nav class="navbar"
+             style="height:20px;background-color: red; border-color: white; margin-top: 2px;margin-bottom: 0;">
+            
+            <div class="container">
+                
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-left" style="margin-left:55px">
 
+                        <li>
+                            <div class="dropdown"style="background-color:red; margin-top:8px; ">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:red;color:white">
+                                    Category
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:400px;padding:15px">
+                                    <a class="dropdown-item" href="#"style="">Action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About" style="color: white">Order</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color: white">Cart</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color: white">Wishlist</a></li>
+                        <li>
+                            <span href="#">
+                                <img src="/images/standard-chartered-logo-white.png" alt="" style="height: 25px; display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; text-indent: -1000px;margin-left: 400px;margin-top:12px">
+                            </span>
+                        </li>
+                    </ul> 
+                    
+                        
+                </div>
+
+            </div>
+        </nav>
+        
+    </div>
+    
+   
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
             <div style="background-color: red; color: white" class="panel-footer">
-                <h4><strong>&copy; 2018 - LiverpoolFanShopApp</strong></h4>
+                <h5><strong>&copy; 2018 Copyrights by Stanleywolf - LiverpoolFanShopApp</strong></h5>
             </div>
         </footer>
     </div>

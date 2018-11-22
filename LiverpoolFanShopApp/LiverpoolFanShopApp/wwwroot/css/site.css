@@ -52,3 +52,16 @@ body {
     background-color: red;
     color: white;
 }
+.list-group-item a{
+    color:white;
+    flood-color:red
+}
+.dropdown-divider {
+    height: 25px;
+}
+.dropdown-item {
+    text-align: center;
+    color: red;
+    height: 15px;
+    font-size:large
+}
